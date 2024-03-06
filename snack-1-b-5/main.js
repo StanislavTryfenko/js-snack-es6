@@ -17,10 +17,14 @@ const zucchine = [
     {varietà: '8', peso: 143, lunghezza: 25,},
     {varietà: '9', peso: 235, lunghezza: 25,},
 ]
+
+//check se stringa o numero
+//console.log(zucchine[0].peso);
+
 // variabile su cui sovrascrivere i pesi parziali
-let pesoParziale
+let pesoZucchine = 0;
 
 // per ogni peso in zucchine sommiamo a peso parziale ogni peso zucchina
-const pesoZucchine = zucchine.forEach(zucchina => pesoParziale += zucchina.peso);
+zucchine.forEach(zucchina => pesoZucchine += zucchina.peso);
 
 console.log(pesoZucchine);

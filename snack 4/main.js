@@ -17,15 +17,15 @@ const persone = [
 ]
 
 //forma lunga classica
-/* const personeMaggiorenni = persone.filter(persona => persona.età >= 18);
+/*  const personeMaggiorenni = persone.filter(persona => persona.età >= 18);
 
  const personeGuidanti = personeMaggiorenni.map(persona => {
     
     persona.guidante = 'si';
     
     return persona;
-});
- */
+}); */
+ 
 
 //forma media contrazione fattibile
 /* const personeMaggiorenni = persone.filter(persona => persona.età >= 18).map(persona => {
@@ -36,8 +36,10 @@ const persone = [
 }) */
 
 //metodo figo ma non ricorderò mai il "...persona"
-const personeGuidanti = persone.filter(persona => persona.età >= 18).map(persona => ({ ...persona, guidante: 'si',}))
+const personeGuidanti = persone.filter(persona => persona.età >= 18).map(persona => ({...persona, guidante: 'si',}))
 
-console.log(personeGuidanti);
+const personeNonGuidanti = persone.filter(persona => persona.età < 18).map(persona => ({...persona, guidante: 'no',}))
+
+console.log(personeGuidanti, personeNonGuidanti);
 
 

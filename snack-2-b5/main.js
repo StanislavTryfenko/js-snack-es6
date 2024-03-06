@@ -22,12 +22,12 @@ const zucchine = [
 //creo array zucchine lunghe
 let pesoZucchineLunghe = 0;
 
-const zucchineLunghe = zucchine.filter(zucchina => zucchina.lunghezza > 15).forEach(zucchina => pesoZucchineLunghe += zucchina.peso)
+zucchine.filter(zucchina => zucchina.lunghezza > 15).forEach(zucchina => pesoZucchineLunghe += zucchina.peso)
 
 // creo array zucchine corte
 let pesoZucchineCorte = 0;
 
-const zucchineCorte = zucchine.filter(zucchina => zucchina.lunghezza < 15).forEach(zucchina => pesoZucchineCorte += zucchina.peso);
+zucchine.filter(zucchina => zucchina.lunghezza < 15).forEach(zucchina => pesoZucchineCorte += zucchina.peso);
 
 //quelle di 15 cm non le mettiamo :P
 

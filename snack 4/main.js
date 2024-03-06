@@ -16,7 +16,22 @@ const persone = [
     { nome: 'asdrubale', cognome: 'esposito', età: '17', },
 ]
 
-//forma lunga classica
+
+// metodo figo ma non ricorderò mai il "...persona"
+const personeGuidanti = persone.filter(persona => persona.età >= 18).map(persona => ({...persona, guidante: 'si',}))
+
+const personeNonGuidanti = persone.filter(persona => persona.età < 18).map(persona => ({...persona, guidante: 'no',}))
+
+// esempio forma media contrazione fattibile
+/* const personeMaggiorenni = persone.filter(persona => persona.età >= 18).map(persona => {
+    
+    persona.guidante = 'si';
+    
+    return persona;
+}) */
+
+
+// esempio forma lunga classica
 /*  const personeMaggiorenni = persone.filter(persona => persona.età >= 18);
 
  const personeGuidanti = personeMaggiorenni.map(persona => {
@@ -26,20 +41,6 @@ const persone = [
     return persona;
 }); */
  
-
-//forma media contrazione fattibile
-/* const personeMaggiorenni = persone.filter(persona => persona.età >= 18).map(persona => {
-    
-    persona.guidante = 'si';
-    
-    return persona;
-}) */
-
-//metodo figo ma non ricorderò mai il "...persona"
-const personeGuidanti = persone.filter(persona => persona.età >= 18).map(persona => ({...persona, guidante: 'si',}))
-
-const personeNonGuidanti = persone.filter(persona => persona.età < 18).map(persona => ({...persona, guidante: 'no',}))
-
 console.log(personeGuidanti, personeNonGuidanti);
 
 

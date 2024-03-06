@@ -4,3 +4,6 @@ Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (
 function reverseString(string){
     return string.split("").reverse().join("");
 }
+
+//testing
+console.log(reverseString('ciao'));
